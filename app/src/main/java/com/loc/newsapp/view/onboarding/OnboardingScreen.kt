@@ -24,12 +24,15 @@ import com.loc.newsapp.view.common.NewsButton
 import com.loc.newsapp.view.common.NewsTextButton
 import com.loc.newsapp.view.onboarding.Composables.OnboardingView
 import com.loc.newsapp.view.onboarding.Composables.ViewIndicator
+import com.loc.newsapp.view.onboarding.viewModel.OnboardingEvent
 import kotlinx.coroutines.launch
 
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun OnboardingScreen() {
+fun OnboardingScreen(
+    event: (OnboardingEvent) -> Unit
+) {
     Column(modifier = Modifier.fillMaxSize()) {
         val pagerState  = rememberPagerState(initialPage = 0) {
             views.size
@@ -89,8 +92,8 @@ fun OnboardingScreen() {
                     label = buttonState.value[1],
                     onClick = {
                         scope.launch {
-                            if (pagerState.currentPage == 3) {
-//                           TODO: navigate to home screen
+                            if (pagerState.currentPage == 2) {
+                                event(OnboardingEvent.SaveAppEntry)
                             } else {
                                 pagerState.animateScrollToPage(
                                     page = pagerState.currentPage + 1
