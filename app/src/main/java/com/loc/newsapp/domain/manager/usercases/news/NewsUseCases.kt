@@ -1,5 +1,6 @@
 package com.loc.newsapp.domain.manager.usercases.news
 
 data class NewsUseCases (
-    var getNews: GetNews
+    var getNews: GetNews,
+    var searchNews: SearchNews
 )
