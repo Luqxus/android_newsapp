@@ -45,9 +45,9 @@ fun Modifier.shimmerEffect(): Modifier = composed {
 }
 
 @Composable
-fun ArticleCardShimmer() {
+fun ArticleCardShimmerEffect(modifier: Modifier = Modifier) {
     Row(
-        modifier = Modifier
+        modifier = modifier
     ) {
         Box(
             modifier = Modifier
