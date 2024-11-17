@@ -1,5 +1,6 @@
 package com.loc.newsapp.view.onboarding
 
+import android.widget.Space
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -101,6 +102,6 @@ fun OnboardingScreen() {
             }
         }
 
-
+        Spacer(modifier = Modifier.weight(0.5f))
     }
 }
