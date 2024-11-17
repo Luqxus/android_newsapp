@@ -7,4 +7,5 @@ object Dimensions {
     val MediumPadding2 = 24.dp
 
     val IndicatorSize  = 14.dp
+    val ViewIndicatorWidth = 52.dp
 }
